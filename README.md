@@ -1,5 +1,21 @@
 # SofarSolar ESP RS485 logger to MQTT
 
+Note if doing this project in PlatformIO (or indeed Arduino IDE) the following libraries will need to be added as they are not part of the repository
+
+The lines below would be added to Platformio.ini in the root directory of the project.
+
+lib_deps =
+
+   256dpi/MQTT
+   
+   4-20ma/ModbusMaster
+   
+   bblanchon/ArduinoJson
+   
+   prampec/IotWebConf
+   
+   joaolopesf/RemoteDebug
+
 ## Background
 From the shelf logger is only works with SolarMan cloud, but I wanted to have full local integration with Home Assistant, because of poor internet connection. Additionally refresh interval from orginal logger (I managed to integrate with Home Assistant too, see HA Add-One project) is not synchronized with sensor with I have for checking energy consumption and production from/to grid. The result was funny, because power wheel shows that house produced energy. 
 
